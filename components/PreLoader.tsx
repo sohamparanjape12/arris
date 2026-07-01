@@ -26,6 +26,8 @@ export default function Preloader() {
                 // Restore scroll when the preloader is fully gone
                 document.body.style.overflow = "";
                 document.documentElement.style.overflow = "";
+                document.body.classList.remove("loading");
+                document.documentElement.classList.remove("loading");
                 if (containerRef.current) {
                     containerRef.current.style.display = "none";
                 }
@@ -38,6 +40,9 @@ export default function Preloader() {
             rotation: 0,
             transformOrigin: "50% 50%"
         });
+
+        // Make the SVG opaque now that it has been translated safely out of the mask
+        gsap.set(svgRef.current, { opacity: 1 });
 
         // 2. Slide the SVG up into view (smooth mask reveal)
         tl.to(svgRef.current, {
@@ -81,7 +86,7 @@ export default function Preloader() {
             <div className="overflow-hidden flex items-center justify-center w-36 h-36 md:w-48 md:h-48">
                 <svg
                     ref={svgRef}
-                    className="text-white w-24 h-24 md:w-32 md:h-32 origin-center"
+                    className="text-white w-24 h-24 md:w-32 md:h-32 origin-center opacity-0"
                     viewBox="0 0 200 200"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"

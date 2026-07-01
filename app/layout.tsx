@@ -23,9 +23,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${monaSans.variable} antialiased overflow-x-hidden`}
+      className={`${monaSans.variable} antialiased overflow-x-hidden loading`}
     >
-      <body className="overflow-x-hidden">
+      <body className="overflow-x-hidden loading">
         <Preloader />
         <LocomotiveScrollProvider>
           <Navbar />

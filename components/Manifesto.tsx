@@ -78,7 +78,7 @@ export default function Manifesto() {
                 <img className="manifesto-image h-full w-full object-cover" src="https://images.pexels.com/photos/13041129/pexels-photo-13041129.jpeg" alt="" />
             </div>
             <div className="text-lg text-center tracking-[0.1em] leading-normal flex flex-col flex-3 relative w-full h-full">
-                <div className="manifesto-text absolute top-20 right-1/2 translate-x-1/2 w-[90%] md:w-[30vw] md:right-20 md:bottom-20 font-semibold tracking-tight text-balance">
+                <div className="manifesto-text absolute right-1/2 translate-x-1/2 translate-y-1/2 w-[90%] md:w-[30vw] md:right-20 md:bottom-20 md:translate-x-0 md:translate-y-0 font-semibold tracking-tight text-balance">
                     <p>our practice is dictated by permanence. we believe spaces should not merely occupy volume, but converse with light, shadow, and time.</p>
                     <br />
                     <p>arris is an intersection of raw physical masonry and contemporary digital curation.</p>

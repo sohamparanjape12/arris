@@ -80,13 +80,13 @@ export default function Navbar() {
         if (isNavOpen) {
             // Animate SVG lines into a Cross (X)
             gsap.to(".line-1", {
-                attr: { x1: 12, y1: 6, x2: 32, y2: 18 },
+                attr: { x1: 5, y1: 5, x2: 19, y2: 19 },
                 duration: 0.4,
                 ease: "power2.out",
                 overwrite: "auto"
             });
             gsap.to(".line-2", {
-                attr: { x1: 12, y1: 18, x2: 32, y2: 6 },
+                attr: { x1: 5, y1: 19, x2: 19, y2: 5 },
                 duration: 0.4,
                 ease: "power2.out",
                 overwrite: "auto"
@@ -135,13 +135,13 @@ export default function Navbar() {
         } else {
             // Animate SVG lines back to Hamburger
             gsap.to(".line-1", {
-                attr: { x1: 8, y1: 8, x2: 36, y2: 8 },
+                attr: { x1: 2, y1: 7, x2: 22, y2: 7 },
                 duration: 0.4,
                 ease: "power2.out",
                 overwrite: "auto"
             });
             gsap.to(".line-2", {
-                attr: { x1: 16, y1: 16, x2: 36, y2: 16 },
+                attr: { x1: 10, y1: 17, x2: 22, y2: 17 },
                 duration: 0.4,
                 ease: "power2.out",
                 overwrite: "auto"
@@ -186,16 +186,16 @@ export default function Navbar() {
                 <div onClick={handleNav} className="nav-trigger z-100 hidden pointer-events-auto" style={{ cursor: "pointer" }}>
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 44 24"
-                        width={44}
+                        viewBox="0 0 24 24"
+                        width={24}
                         height={24}
                         fill="none"
                         stroke="currentColor"
                         strokeWidth={2}
                         strokeLinecap="round"
                     >
-                        <line className="line-1" x1="8" y1="8" x2="36" y2="8" />
-                        <line className="line-2" x1="16" y1="16" x2="36" y2="16" />
+                        <line className="line-1" x1="2" y1="7" x2="22" y2="7" />
+                        <line className="line-2" x1="10" y1="17" x2="22" y2="17" />
                     </svg>
                 </div>
             </div>
@@ -213,11 +213,11 @@ export default function Navbar() {
             </svg>
 
             {/* Content overlay */}
-            <div className="menu-content relative z-10 opacity-0 flex flex-col items-center justify-center space-y-6 font-sans">
-                <a href="#directory" onClick={() => setIsNavOpen(false)} className="menu-link text-5xl font-semibold tracking-[-0.06em] text-foreground hover:text-foreground/60 transition-colors duration-300 leading-[0.8]">
+            <div className="menu-content group relative z-10 opacity-0 flex flex-col items-center justify-center space-y-4 font-sans">
+                <a href="#directory" onClick={() => setIsNavOpen(false)} className="menu-link text-5xl font-semibold tracking-[-0.06em] text-foreground group-hover:text-foreground/60 hover:text-foreground transition-colors duration-300 leading-[0.8]">
                     index
                 </a>
-                <a href="#contact" onClick={() => setIsNavOpen(false)} className="menu-link text-5xl font-semibold tracking-[-0.06em] text-foreground hover:text-foreground/60 transition-colors duration-300 leading-[0.8]">
+                <a href="#contact" onClick={() => setIsNavOpen(false)} className="menu-link text-5xl font-semibold tracking-[-0.06em] text-foreground group-hover:text-foreground/60 hover:text-foreground transition-colors duration-300 leading-[0.8]">
                     contact
                 </a>
             </div>
