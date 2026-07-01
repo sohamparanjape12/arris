@@ -268,18 +268,22 @@ export default function Hero() {
 
             wrapper.style.height = `${rect.height}px`;
 
+            // Calculate scroll-independent absolute coordinates
+            const absoluteTop = rect.top + window.scrollY;
+            const absoluteLeft = rect.left + window.scrollX;
+
             gsap.set(title, {
                 position: "fixed",
-                top: rect.top,
-                left: rect.left,
+                top: absoluteTop,
+                left: absoluteLeft,
                 width: rect.width,
                 margin: 0,
                 zIndex: 50,
                 transformOrigin: "left top",
             });
 
-            const targetX = slotRect.left - rect.left;
-            const targetY = slotRect.top - rect.top;
+            const targetX = slotRect.left - absoluteLeft;
+            const targetY = slotRect.top - absoluteTop;
             const targetScale = slotRect.height / rect.height;
 
             gsap.fromTo(title,

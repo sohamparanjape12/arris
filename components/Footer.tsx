@@ -65,19 +65,19 @@ export default function Footer() {
 
     return (
         <footer className="min-h-[60dvh] w-full bg-foreground grid grid-cols-5 gap-y-8 px-12 pt-12 pb-12 overflow-hidden">
-            <div className="col-span-5 md:col-span-3 row-start-2">
+            <div className="col-span-5 md:col-span-3 row-start-2 md:row-start-1">
                 <h1 className="footer-text text-3xl md:text-4xl font-medium text-white tracking-tight max-w-full md:max-w-[65%] lowercase">
                     Let&apos;s create
                     something
                     extraordinary together.
                 </h1>
             </div>
-            <div className="col-span-2 flex flex-col">
-                <a href="#" className="footer-nav-link text-lg font-medium text-white tracking-tight">index</a>
-                <a href="#" className="footer-nav-link text-lg font-medium text-white tracking-tight">contact</a>
+            <div className="col-span-2 flex flex-col z-100">
+                <a href="#directory" className="footer-nav-link text-lg font-medium text-white tracking-tight">index</a>
+                <a href="#contact" className="footer-nav-link text-lg font-medium text-white tracking-tight">contact</a>
             </div>
             <div className="col-span-5 flex justify-end items-end">
-                <h1 className="footer-title text-white tracking-tight font-black leading-[0.65]" style={{ fontSize: "clamp(10rem, 20.83vw, 20.83vw)", letterSpacing: "-0.08em" }}>arris</h1>
+                <h1 className="footer-title text-white tracking-tight font-black leading-[0.65] select-none" style={{ fontSize: "clamp(10rem, 20.83vw, 20.83vw)", letterSpacing: "-0.08em" }}>arris</h1>
             </div>
         </footer>
     )
